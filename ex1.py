@@ -28,12 +28,12 @@ def est_segment_valide(segment):
                     else:
                         print(valide)
 
-# def est_ip_valide(ip):
+def est_ip_valide(ip):
 
-#     print(ip)
-#     if est_segment_valide(segment):
-#           print(True)
-#     else:
-#           print(False)
+    print(ip)
+    if est_segment_valide(segment):
+          print(True)
+    else:
+          print(False)
 
-          
+    est_ip_valide(ip)     
