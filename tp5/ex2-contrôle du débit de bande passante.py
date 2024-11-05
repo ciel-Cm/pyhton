@@ -1,13 +1,14 @@
 import random
 
 
-def gestion(seuil):
+def gestion(seuil):*
+    element=0
     tentatives=0
     condition=True
     while condition:
 
         debit = random.uniform(20, 200)
-        element=+1
+        element+=1
         if debit > seuil:
             print(f"Itération {element}. Débit réseau {debit:.2f} Mbp a dépassé le seuil {seuil}.")
             tentatives=tentatives+1
