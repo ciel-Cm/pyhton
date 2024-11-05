@@ -28,6 +28,8 @@ def est_segment_valide(segment):
                     else:
                         print(valide)
 
+est_segment_valide(segment)
+
 # def est_ip_valide(ip):
 
 #     print(ip)
