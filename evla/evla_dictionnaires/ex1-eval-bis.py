@@ -1,6 +1,6 @@
 # 1. Création d'un dictionnaire vide pour stocker les ID
 reseau = {
-    101:{"nom": "Capteur de temperature", "etat":"inactif"},
+    101:{"nom": "Capteur de temperature", "etat":"actif"},
     102:{"nom": "Capteur de d'humitité", "etat":"actif"},
     # 103:{"nom": "Capteur de pression", "etat":"inactif"} 
 }
@@ -46,10 +46,10 @@ def modififer_etat(id,etat,reseau):
         choix = input("Voulez vous modifier l'etat d'un peripherique ? o/n: ")
         if choix.lower() =="o":
             if id in reseau: 
-                print("Existe déja")
-            else:
-                reseau[etat]= ("etat",etat)
+                reseau[id]["etat"]= etat
                 print("l'etat d'un peripherique est modifier !")
+            else:
+                print("Existe déja")
         else:
             print("Aurevoir")
             break
@@ -58,7 +58,12 @@ def modififer_etat(id,etat,reseau):
 # print(reseau)
 
 def afficher_peripherique_actifs(reseau): 
-    for reseau.items():
-       
+    list=[]
+    for cle,valeur in reseau.items():   
+        if valeur["etat"]=="actif":
+            list = valeur
+    print(list)
+            
+
+
 afficher_peripherique_actifs(reseau)
-print(reseau)
